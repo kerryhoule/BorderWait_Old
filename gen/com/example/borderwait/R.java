@@ -1292,11 +1292,12 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f070019;
         public static final int action_menu_presenter=0x7f07001a;
         public static final int action_mode_close_button=0x7f070027;
-        public static final int action_settings=0x7f070046;
+        public static final int action_settings=0x7f070049;
         public static final int activity_chooser_view_content=0x7f070028;
         public static final int always=0x7f07000f;
         public static final int beginning=0x7f070014;
-        public static final int btnSignin=0x7f070045;
+        public static final int btnSignin=0x7f070048;
+        public static final int btnsignup=0x7f070047;
         public static final int checkbox=0x7f070030;
         public static final int collapseActionView=0x7f070011;
         public static final int container=0x7f070041;
@@ -1306,7 +1307,8 @@ containing a value of this type.
         public static final int dropdown=0x7f070013;
         public static final int edit_query=0x7f070033;
         public static final int end=0x7f070016;
-        public static final int etEmail=0x7f070044;
+        public static final int etEmail=0x7f070045;
+        public static final int etPassword=0x7f070046;
         public static final int expand_activities_button=0x7f070029;
         public static final int expanded_menu=0x7f07002f;
         public static final int home=0x7f070017;
@@ -1347,7 +1349,8 @@ containing a value of this type.
         public static final int textView1=0x7f070042;
         public static final int title=0x7f07002e;
         public static final int top_action_bar=0x7f070023;
-        public static final int tvEmail=0x7f070043;
+        public static final int tvEmail=0x7f070044;
+        public static final int tvPassword=0x7f070043;
         public static final int up=0x7f070024;
         public static final int useLogo=0x7f070007;
         public static final int userInfoContainer=0x7f070040;
@@ -1455,7 +1458,7 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f080026;
-        public static final int action_settings=0x7f08002a;
+        public static final int action_settings=0x7f080029;
         public static final int app_name=0x7f080028;
         /**   Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70] 
@@ -1480,6 +1483,9 @@ containing a value of this type.
         [CHAR LIMIT=70] 
          */
         public static final int auth_client_using_bad_version_title=0x7f080014;
+        public static final int button_signin=0x7f08002e;
+        public static final int button_signout=0x7f08002f;
+        public static final int button_signup=0x7f080030;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -1551,33 +1557,36 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f080013;
-        public static final int hello_world=0x7f080029;
+        public static final int label_email=0x7f08002b;
+        public static final int label_hi=0x7f080031;
+        public static final int label_pass=0x7f08002c;
+        public static final int label_remember=0x7f08002d;
         /**  Location client code resources (prefix with location_client) 
          */
         public static final int location_client_powered_by_google=0x7f08001a;
-        public static final int pref_default_display_name=0x7f080031;
-        public static final int pref_description_social_recommendations=0x7f08002f;
+        public static final int pref_default_display_name=0x7f080037;
+        public static final int pref_description_social_recommendations=0x7f080035;
         /**  Example settings for Data & Sync 
          */
-        public static final int pref_header_data_sync=0x7f080033;
+        public static final int pref_header_data_sync=0x7f080039;
         /**  Strings related to Settings 
  Example General settings 
          */
-        public static final int pref_header_general=0x7f08002d;
+        public static final int pref_header_general=0x7f080033;
         /**  Example settings for Notifications 
          */
-        public static final int pref_header_notifications=0x7f080036;
-        public static final int pref_ringtone_silent=0x7f080039;
-        public static final int pref_title_add_friends_to_messages=0x7f080032;
-        public static final int pref_title_display_name=0x7f080030;
-        public static final int pref_title_new_message_notifications=0x7f080037;
-        public static final int pref_title_ringtone=0x7f080038;
-        public static final int pref_title_social_recommendations=0x7f08002e;
-        public static final int pref_title_sync_frequency=0x7f080034;
-        public static final int pref_title_system_sync_settings=0x7f080035;
-        public static final int pref_title_vibrate=0x7f08003a;
-        public static final int title_activity_marker=0x7f08002b;
-        public static final int title_activity_settings=0x7f08002c;
+        public static final int pref_header_notifications=0x7f08003c;
+        public static final int pref_ringtone_silent=0x7f08003f;
+        public static final int pref_title_add_friends_to_messages=0x7f080038;
+        public static final int pref_title_display_name=0x7f080036;
+        public static final int pref_title_new_message_notifications=0x7f08003d;
+        public static final int pref_title_ringtone=0x7f08003e;
+        public static final int pref_title_social_recommendations=0x7f080034;
+        public static final int pref_title_sync_frequency=0x7f08003a;
+        public static final int pref_title_system_sync_settings=0x7f08003b;
+        public static final int pref_title_vibrate=0x7f080040;
+        public static final int title_activity_marker=0x7f08002a;
+        public static final int title_activity_settings=0x7f080032;
     }
     public static final class style {
         /** 
