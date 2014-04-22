@@ -1292,19 +1292,21 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f070019;
         public static final int action_menu_presenter=0x7f07001a;
         public static final int action_mode_close_button=0x7f070027;
-        public static final int action_settings=0x7f070041;
+        public static final int action_settings=0x7f070046;
         public static final int activity_chooser_view_content=0x7f070028;
         public static final int always=0x7f07000f;
         public static final int beginning=0x7f070014;
+        public static final int btnSignin=0x7f070045;
         public static final int checkbox=0x7f070030;
         public static final int collapseActionView=0x7f070011;
-        public static final int container=0x7f070040;
+        public static final int container=0x7f070041;
         public static final int default_activity_button=0x7f07002b;
         public static final int dialog=0x7f070012;
         public static final int disableHome=0x7f07000c;
         public static final int dropdown=0x7f070013;
         public static final int edit_query=0x7f070033;
         public static final int end=0x7f070016;
+        public static final int etEmail=0x7f070044;
         public static final int expand_activities_button=0x7f070029;
         public static final int expanded_menu=0x7f07002f;
         public static final int home=0x7f070017;
@@ -1342,10 +1344,13 @@ containing a value of this type.
         public static final int submit_area=0x7f07003c;
         public static final int tabMode=0x7f070006;
         public static final int terrain=0x7f070003;
+        public static final int textView1=0x7f070042;
         public static final int title=0x7f07002e;
         public static final int top_action_bar=0x7f070023;
+        public static final int tvEmail=0x7f070043;
         public static final int up=0x7f070024;
         public static final int useLogo=0x7f070007;
+        public static final int userInfoContainer=0x7f070040;
         public static final int withText=0x7f070010;
     }
     public static final class integer {
@@ -1401,7 +1406,9 @@ containing a value of this type.
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_main=0x7f030018;
         public static final int activity_marker=0x7f030019;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001a;
+        public static final int fragment_loggedin=0x7f03001a;
+        public static final int fragment_login=0x7f03001b;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
     }
     public static final class menu {
         public static final int main=0x7f0e0000;

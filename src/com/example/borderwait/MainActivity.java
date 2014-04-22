@@ -6,8 +6,12 @@ import android.location.Location;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -38,18 +42,24 @@ GooglePlayServicesClient.OnConnectionFailedListener, OnMapLongClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		if (savedInstanceState == null) {
+			getSupportFragmentManager().beginTransaction()
+					.add(R.id.userInfoContainer, new LoginFragment()).commit();
+		}
+		
 		//Get location services ready to go
 		lcMyLocation = new LocationClient(this, this, this);
 		
 		//Test Connection first
 		isConnected = TestConnection();
 		
+		//Check if connection to internet succeeded
 		if (isConnected)
 		{	
 			//Get parse ready to go
 			Parse.initialize(this, "4rMpAqbh9hdSyIRcvefxtInZtaPz3Ef7K8tGaEWS", "MXxegBkLTfCyM4kSHBlgQSj6y54ZaFtdjmV20SV2");
 			
-			//Get reference to the map - Demo 2?
+			//Get reference to the map
 			map = ((SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
 			
 			//Set click listener for the map
@@ -156,5 +166,12 @@ GooglePlayServicesClient.OnConnectionFailedListener, OnMapLongClickListener {
 	        .position(point)
 	        .title("You are here")           
 	        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));  
+	}
+	
+	public void signIn(View v)
+	{
+		//Replace the fragment thats already there
+		getSupportFragmentManager().beginTransaction()
+		.replace(R.id.userInfoContainer, new LoggedinFragment()).commit();
 	}
 }
