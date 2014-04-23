@@ -1292,12 +1292,16 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f070019;
         public static final int action_menu_presenter=0x7f07001a;
         public static final int action_mode_close_button=0x7f070027;
-        public static final int action_settings=0x7f070049;
+        public static final int action_settings=0x7f070054;
         public static final int activity_chooser_view_content=0x7f070028;
         public static final int always=0x7f07000f;
         public static final int beginning=0x7f070014;
         public static final int btnSignin=0x7f070048;
+        public static final int btnSignupCancel=0x7f070051;
+        public static final int btnSignupClear=0x7f070052;
+        public static final int btnSignupOk=0x7f070053;
         public static final int btnsignup=0x7f070047;
+        public static final int cbxRemember=0x7f070049;
         public static final int checkbox=0x7f070030;
         public static final int collapseActionView=0x7f070011;
         public static final int container=0x7f070041;
@@ -1309,6 +1313,10 @@ containing a value of this type.
         public static final int end=0x7f070016;
         public static final int etEmail=0x7f070045;
         public static final int etPassword=0x7f070046;
+        public static final int etSignupConfirm=0x7f070050;
+        public static final int etSignupEmail=0x7f07004e;
+        public static final int etSignupName=0x7f07004d;
+        public static final int etSignupPass=0x7f07004f;
         public static final int expand_activities_button=0x7f070029;
         public static final int expanded_menu=0x7f07002f;
         public static final int home=0x7f070017;
@@ -1349,7 +1357,10 @@ containing a value of this type.
         public static final int textView1=0x7f070042;
         public static final int title=0x7f07002e;
         public static final int top_action_bar=0x7f070023;
+        public static final int tvConfirm=0x7f07004b;
         public static final int tvEmail=0x7f070044;
+        public static final int tvName=0x7f07004c;
+        public static final int tvPass=0x7f07004a;
         public static final int tvPassword=0x7f070043;
         public static final int up=0x7f070024;
         public static final int useLogo=0x7f070007;
@@ -1409,13 +1420,16 @@ containing a value of this type.
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_main=0x7f030018;
         public static final int activity_marker=0x7f030019;
-        public static final int fragment_loggedin=0x7f03001a;
-        public static final int fragment_login=0x7f03001b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
+        public static final int activity_signup=0x7f03001a;
+        public static final int fragment_loggedin=0x7f03001b;
+        public static final int fragment_login=0x7f03001c;
+        public static final int fragment_signup=0x7f03001d;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
     }
     public static final class menu {
         public static final int main=0x7f0e0000;
         public static final int marker=0x7f0e0001;
+        public static final int signup=0x7f0e0002;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1486,6 +1500,10 @@ containing a value of this type.
         public static final int button_signin=0x7f08002e;
         public static final int button_signout=0x7f08002f;
         public static final int button_signup=0x7f080030;
+        public static final int button_signup_cancel=0x7f080039;
+        public static final int button_signup_clear=0x7f080038;
+        public static final int button_signup_ok=0x7f080037;
+        public static final int checkbox_signin_remember=0x7f08003a;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -1561,32 +1579,37 @@ containing a value of this type.
         public static final int label_hi=0x7f080031;
         public static final int label_pass=0x7f08002c;
         public static final int label_remember=0x7f08002d;
+        public static final int label_signup_confirm=0x7f080036;
+        public static final int label_signup_email=0x7f080034;
+        public static final int label_signup_name=0x7f080033;
+        public static final int label_signup_password=0x7f080035;
         /**  Location client code resources (prefix with location_client) 
          */
         public static final int location_client_powered_by_google=0x7f08001a;
-        public static final int pref_default_display_name=0x7f080037;
-        public static final int pref_description_social_recommendations=0x7f080035;
+        public static final int pref_default_display_name=0x7f080040;
+        public static final int pref_description_social_recommendations=0x7f08003e;
         /**  Example settings for Data & Sync 
          */
-        public static final int pref_header_data_sync=0x7f080039;
+        public static final int pref_header_data_sync=0x7f080042;
         /**  Strings related to Settings 
  Example General settings 
          */
-        public static final int pref_header_general=0x7f080033;
+        public static final int pref_header_general=0x7f08003c;
         /**  Example settings for Notifications 
          */
-        public static final int pref_header_notifications=0x7f08003c;
-        public static final int pref_ringtone_silent=0x7f08003f;
-        public static final int pref_title_add_friends_to_messages=0x7f080038;
-        public static final int pref_title_display_name=0x7f080036;
-        public static final int pref_title_new_message_notifications=0x7f08003d;
-        public static final int pref_title_ringtone=0x7f08003e;
-        public static final int pref_title_social_recommendations=0x7f080034;
-        public static final int pref_title_sync_frequency=0x7f08003a;
-        public static final int pref_title_system_sync_settings=0x7f08003b;
-        public static final int pref_title_vibrate=0x7f080040;
+        public static final int pref_header_notifications=0x7f080045;
+        public static final int pref_ringtone_silent=0x7f080048;
+        public static final int pref_title_add_friends_to_messages=0x7f080041;
+        public static final int pref_title_display_name=0x7f08003f;
+        public static final int pref_title_new_message_notifications=0x7f080046;
+        public static final int pref_title_ringtone=0x7f080047;
+        public static final int pref_title_social_recommendations=0x7f08003d;
+        public static final int pref_title_sync_frequency=0x7f080043;
+        public static final int pref_title_system_sync_settings=0x7f080044;
+        public static final int pref_title_vibrate=0x7f080049;
         public static final int title_activity_marker=0x7f08002a;
-        public static final int title_activity_settings=0x7f080032;
+        public static final int title_activity_settings=0x7f08003b;
+        public static final int title_activity_signup=0x7f080032;
     }
     public static final class style {
         /** 

@@ -6,12 +6,11 @@ import android.location.Location;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -37,15 +36,25 @@ GooglePlayServicesClient.OnConnectionFailedListener, OnMapLongClickListener {
 	Location myLocation;
 	LocationClient lcMyLocation;
 	
+	//Variables to hold references to objects on the page
+	EditText etEmail, etPassword;
+	CheckBox cbxRemember;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		//Start with Login fragment
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.userInfoContainer, new LoginFragment()).commit();
 		}
+		
+		//Get reference to each object on bottom fragment
+		etEmail = (EditText)findViewById(R.id.etEmail);
+		etPassword = (EditText)findViewById(R.id.etPassword);
+		cbxRemember = (CheckBox)findViewById(R.id.cbxRemember);
 		
 		//Get location services ready to go
 		lcMyLocation = new LocationClient(this, this, this);
@@ -53,7 +62,7 @@ GooglePlayServicesClient.OnConnectionFailedListener, OnMapLongClickListener {
 		//Test Connection first
 		isConnected = TestConnection();
 		
-		//Check if connection to internet succeeded
+		//Check if connection to Internet succeeded
 		if (isConnected)
 		{	
 			//Get parse ready to go
@@ -168,10 +177,40 @@ GooglePlayServicesClient.OnConnectionFailedListener, OnMapLongClickListener {
 	        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));  
 	}
 	
+	//Method to sign user in to access saved markers
 	public void signIn(View v)
 	{
-		//Replace the fragment thats already there
-		getSupportFragmentManager().beginTransaction()
-		.replace(R.id.userInfoContainer, new LoggedinFragment()).commit();
+		//Check if user input an email or password
+		if (!(etEmail.getText().toString().length() == 0 && etPassword.getText().toString().length() == 0))
+		{
+			//User input something in both fields, check DB for user
+			
+			
+			//Replace the fragment thats already there
+			getSupportFragmentManager().beginTransaction()
+			.replace(R.id.userInfoContainer, new LoggedinFragment()).commit();
+		}
+		else
+		{
+			//User did not input something, check both fields
+			if (etEmail.getText().toString().length() > 0)
+			{
+				//Email has data in it, password must not have any data
+				Toast.makeText(this, "You must enter a password",
+		                Toast.LENGTH_LONG).show();
+			}
+			else
+			{
+				//Email is empty might as well tell them to fix it regardless if password is filled or not
+				Toast.makeText(this, "You must enter an email address",
+		                Toast.LENGTH_LONG).show();
+			}
+		}
+	}
+	
+	//Method to allow user to sign up
+	public void signUp(View v)
+	{
+		
 	}
 }

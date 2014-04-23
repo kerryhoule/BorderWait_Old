@@ -11,5 +11,14 @@
     <string name="button_signout">Sign Out</string>
     <string name="button_signup">Sign Up</string>
     <string name="label_hi">Hi</string>
+    <string name="title_activity_signup">Sign Up</string>
+    <string name="label_signup_name">Name:</string>
+    <string name="label_signup_email">Email:</string>
+    <string name="label_signup_password">Password:</string>
+    <string name="label_signup_confirm">Confirm Password:</string>
+    <string name="button_signup_ok">OK</string>
+    <string name="button_signup_clear">Clear</string>
+    <string name="button_signup_cancel">Cancel</string>
+    <string name="checkbox_signin_remember">Remember me?</string>
 
 </resources>

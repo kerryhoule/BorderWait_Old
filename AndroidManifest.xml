@@ -48,6 +48,10 @@
             android:name="com.example.borderwait.MarkerActivity"
             android:label="@string/title_activity_marker" >
         </activity>
+        <activity
+            android:name="com.example.borderwait.SignupActivity"
+            android:label="@string/title_activity_signup" >
+        </activity>
     </application>
 
 </manifest>
