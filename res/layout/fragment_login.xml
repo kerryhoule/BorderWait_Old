@@ -55,7 +55,6 @@
         android:layout_alignBaseline="@+id/btnSignin"
         android:layout_alignBottom="@+id/btnSignin"
         android:layout_alignLeft="@+id/tvPassword"
-        android:onClick="signUp"
         android:text="@string/button_signup" />
 
     <Button
@@ -65,7 +64,6 @@
         android:layout_alignRight="@+id/etPassword"
         android:layout_below="@+id/etPassword"
         android:layout_marginTop="55dp"
-        android:onClick="signIn"
         android:text="@string/button_signin" />
 
     <CheckBox
