@@ -34,9 +34,8 @@ GooglePlayServicesClient.OnConnectionFailedListener, OnMapLongClickListener {
 	Location myLocation;
 	LocationClient lcMyLocation;
 	
-	//Variables to hold references to objects on the page
-//	EditText etEmail, etPassword;
-//	CheckBox cbxRemember;
+	//Variables to hold for logging in user
+	String email, name, password;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -176,5 +175,24 @@ GooglePlayServicesClient.OnConnectionFailedListener, OnMapLongClickListener {
 		//Go to sign up activity
 		Intent intent = new Intent(MainActivity.this, SignupActivity.class);
         startActivity(intent);
+	}
+	
+	//Method to set userdata between fragment changes
+	public void setUserData(String passedName, String passedEmail, String passedPassword)
+	{
+		//Set the user data
+		name = passedName;
+		email = passedEmail;
+		password = passedPassword;
+	}
+	
+	//Method to grab userdata between fragment changes
+	public String[] getUserData()
+	{
+		//Make a string array
+		String[] userData = {name, email, password};
+		
+		//Return that array
+		return userData;
 	}
 }

@@ -65,7 +65,7 @@ public class SignupActivity extends Activity {
 				}
 				else
 				{
-					//Some fields weren't filled out
+					//Some fields weren't filled out, will change this later
 					Toast.makeText(SignupActivity.this, "Something wasnt filled out, will find out after", Toast.LENGTH_LONG).show();
 				}
 			}
