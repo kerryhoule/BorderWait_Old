@@ -35,11 +35,12 @@ public class LoginFragment extends Fragment {
 		btnSignIn = (Button)rootView.findViewById(R.id.btnSignin);
 		
 		//Setup Listeners
+		//Sign In
 		btnSignIn.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
 				//Check if user input an email or password
-				if (!(etEmail.getText().toString().length() == 0 && etPassword.getText().toString().length() == 0))
+				if (etEmail.getText().toString().length() > 0 && etPassword.getText().toString().length() > 0)
 				{
 					//User input something in both fields, check DB for user
 					
@@ -64,6 +65,15 @@ public class LoginFragment extends Fragment {
 				                Toast.LENGTH_LONG).show();
 					}
 				}
+			}
+		});
+		
+		//Sign Up
+		btnSignUp.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View v) {
+				//Call method to switch activities
+				((MainActivity)getActivity()).signUp();
 			}
 		});
 		
